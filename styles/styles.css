@@ -1,0 +1,420 @@
+/* || Roboto Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* || Poppins Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* || RESET */
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* || CSS Font Size Variables */
+:root {
+    /* | For Heading Text  */
+    --HEADING--SIZE: 25px;
+    --HEADING--LINE--HEIGHT: 36px;
+    --HEADING--LETTER--SPACING: 0.03em;
+
+    /* | For Title Text  */
+    --TITLE--SIZE: 20px;
+    --TITLE--LINE--HEIGHT: 24px;
+    --TITLE--LETTER--SPACING: 0.15px;
+
+    /* | For Label Text  */
+    --LABLE--SIZE: 18px;
+    --LABEL--LINE--HEIGHT: 16px;
+    --LABEL--LETTER--SPACING: 0.5px;
+
+    /* | For Body Text  */
+    --BODY--SIZE: 14px;
+    --BODY--LINE-HEIGHT: 20px;
+    --BODY--LETTER--SPACING: 0.25px;
+
+}
+
+
+input,
+button {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* || Body  */
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: #202020;
+}
+
+
+/* || Loder Element Styles */
+.loder {
+    background-color: #202020;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 900;
+    transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+}
+
+/* Class For Js To Hide This Element  */
+.loder--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loder::before {
+    content: '';
+    background-color: transparent;
+    width: 35px;
+    height: 35px;
+    border: 8px solid #2c2c2c;
+    border-top-color: #946286;
+    border-radius: 999px;
+    animation: loder infinite .5s linear;
+}
+
+@keyframes loder {
+    to {
+        transform: rotate(1turn);
+    }
+
+    from {
+        transform: rotate(0turn);
+    }
+}
+
+/* || Main Container Styles */
+#root {
+    background-color: inherit;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 10px;
+    position: relative;
+    /* || padding for header */
+    padding: 2px;
+}
+
+/* || Header section style  */
+.header {
+    background-color: #2c2c2c;
+    box-shadow: 0 0 5px #0000004d;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: unset;
+    left: 0;
+    z-index: 100;
+}
+
+.header .head {
+    background-color: transparent;
+    color: darkcyan;
+    width: 100%;
+    max-width: 75%;
+    min-width: 0;
+    font-size: var(--TITLE--SIZE);
+    letter-spacing: var(--TITLE--LETTER--SPACING);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* || Profile Picture Cont Style  */
+.profile--cont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 24px;
+    padding-left: 2rem;
+}
+
+.profile--figure--cont {
+    width: 100px;
+    height: 100px;
+    background-color: #946286;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.profile--figure--cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* || Resume Wrapper container style   */
+.resume--wrapper {
+    background-color: #2c2c2c;
+    color: #fff;
+    width: 100%;
+    min-width: 100%;
+    max-width: 65rem;
+    min-width: 0;
+    height: fit-content;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    border-radius: .5rem;
+    transition: max-width 0.3s ease-in-out;
+}
+
+.resume--header {
+    background-color: transparent;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    padding-top: 0;
+}
+
+
+/* || Contact Information Style */
+.contact--information {
+    background-color: #2a3030;
+    width: 100%;
+    padding: .5rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: grid-template-columns 0.3s ease-in-out;
+}
+
+@media (width <=768px) {
+    .contact--information {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.contact--information .touch--overflow {
+    margin-block: .2rem;
+}
+
+.touch--overflow .link {
+    width: 100%;
+    text-decoration: none;
+    color: beige;
+    font-size: var(--LABLE--SIZE);
+    letter-spacing: var(--LABEL--LETTER--SPACING);
+    line-height: var(--LABEL--LINE--HEIGHT);
+    padding: 5px;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.link .figure--cont {
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+}
+
+.figure--cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.link h4 {
+    font-weight: 400;
+    opacity: .8;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    overflow: hidden;
+    padding: 2.5px;
+}
+
+
+/* || Work details Section */
+.work--detail--cont {
+    width: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: grid-template-columns 0.3s ease-in-out;
+}
+
+@media (width <=768px) {
+    .work--detail--cont {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* || Left Grid Container */
+.left--grid {
+    padding: 1.5rem 2rem;
+    /* padding-right: 0; */
+    background-color: transparent;
+}
+
+
+.education--card--link {
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    padding-left: 0;
+}
+
+
+#project--cont {
+    width: 100%;
+    background-color: transparent;
+}
+
+.project--card--link {
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    padding-left: 0;
+}
+
+
+/* || Achievements Container Styles  */
+.achievements--cont {
+    background-color: transparent;
+    width: 100%;
+}
+
+
+/* || Right Grid Container Styles  */
+.right--grid {
+    padding: 0 2rem;
+    background-color: transparent;
+}
+
+@media (width > 768px) {
+    .right--grid {
+        padding: 1.5rem 2rem;
+        padding-left: 0;
+    }
+}
+
+
+/* || Skill Container Style  */
+#skill--cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 0;
+}
+
+#skill--cont .skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    /* background-color: #ae709c0c; */
+    border-radius: 18px;
+    color: darkcyan;
+}
+
+
+.reating--cont {
+    font-size: var(--LABLE--SIZE);
+    letter-spacing: var(--LABEL--LETTER--SPACING);
+    line-height: var(--LABEL--LINE--HEIGHT);
+    padding: 5px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: .8;
+}
+
+
+/* || Workshop Card Container Style  */
+#workshop--cont {
+    width: 100%;
+    background-color: transparent;
+}
+
+.workshop--card {
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+
+/* || Certificates Card Styles  */
+.certificate--card {
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+
+/* || Language Section Styles  */
+#languages--cont {
+    background-color: transparent;
+    width: 100%;
+}
+
+.language--cont {
+    background-color: transparent;
+    color: darkcyan;
+    padding: 5px;
+    padding-left: 0;
+}
+
+.language--cont .subtitle--text {
+    color: #fff;
+}
+
+.language--rating {
+    letter-spacing: -2px;
+    white-space: nowrap;
+}
+
+
+/* || Interest Container Styles  */
+.interest--cont {
+    background-color: transparent;
+    width: 100%;
+}

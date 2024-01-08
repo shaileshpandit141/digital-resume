@@ -1,0 +1,37 @@
+/* || This All styles resued entair the Document  */
+
+.touch--overflow {
+    /* background-color: rgb(65, 82, 82); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.heading--text {
+    color: #ae709c;
+    font-size: var(--HEADING--SIZE);
+    letter-spacing: var(--HEADING--LETTER--SPACING);
+    text-transform: uppercase;
+    opacity: .8;
+    margin-block: 1.5rem .5rem;
+}
+
+
+.title--text {
+    text-transform: capitalize;
+    font-size: var(--LABLE--SIZE);
+    letter-spacing: var(--LABEL--LETTER--SPACING);
+    line-height: var(--LABEL--LINE--HEIGHT);
+    opacity: .8;
+}
+
+
+.subtitle--text {
+    font-size: var(--BODY--SIZE);
+    letter-spacing: var(--BODY--LETTER--SPACING);
+    line-height: var(--BODY--LINE-HEIGHT);
+    font-style: italic;
+    opacity: .6;
+}
