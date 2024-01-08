@@ -1,6 +1,6 @@
-# My Resume Page (SHAILESH PANDIT)
+# Welcome to the repository for my personal Digital Resume page! 
 
-Welcome to the repository for my personal resume page! This web page is designed to showcase my professional experience, skills, and accomplishments in an interactive and visually appealing format.
+This web page is designed to showcase my professional experience, skills, and accomplishments in an interactive and visually appealing format.
 
 ## Technologies Used
 
