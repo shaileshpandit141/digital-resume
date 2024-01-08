@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     z-index: 900;
-    transition: opacity 0.6s ease-in, visibility 0.6s ease-in;
+    transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
 }
 
 /* Class For Js To Hide This Element  */
@@ -28,7 +28,7 @@
     border: 8px solid #2c2c2c;
     border-top-color: #946286;
     border-radius: 999px;
-    animation: loader infinite .6s linear;
+    animation: loader infinite .5s linear;
 }
 
 @keyframes loader {
