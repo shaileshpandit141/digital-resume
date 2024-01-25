@@ -6,4 +6,11 @@ export default [
         date: '10/2023 - Present',
         githubLink: 'ShareAnything-social-media-web-app',
     },
+    {
+        id: 1,
+        title: 'Deep-Translator',
+        subTitle: 'This web application allows users to translate text from one language to another using the power of Django on the backend, the deep- translator Python module for translation, and a React frontend.',
+        date: '01/2024 - Present',
+        githubLink: 'Django-React-Language-Translator',
+    },
 ]
