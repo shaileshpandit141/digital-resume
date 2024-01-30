@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         skillName: 'Python',
-        rating: 5,
+        rating: 4,
     },
     {
         id: 2,
@@ -12,12 +12,12 @@ export default [
     {
         id: 3,
         skillName: 'HTML5',
-        rating: 5,
+        rating: 4,
     },
     {
         id: 4,
         skillName: 'CSS3',
-        rating: 5,
+        rating: 4,
     },
     {
         id: 5,
