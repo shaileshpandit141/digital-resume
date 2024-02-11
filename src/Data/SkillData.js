@@ -27,12 +27,12 @@ export default [
     {
         id: 6,
         skillName: 'Django',
-        rating: 4,
+        rating: 3,
     },
     {
         id: 7,
         skillName: 'Django Rest Framework',
-        rating: 4,
+        rating: 3,
     },
     {
         id: 8,
